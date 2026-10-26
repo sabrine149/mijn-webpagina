@@ -1,0 +1,262 @@
+/* ---------- Self-hosted display font: Libre Caslon Condensed ---------- */
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url('fonts/LibreCaslonCondensed-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url('fonts/LibreCaslonCondensed-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url('fonts/LibreCaslonCondensed-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url('fonts/LibreCaslonCondensed-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url('fonts/LibreCaslonCondensed-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ---------- Tokens ---------- */
+:root {
+  --cream:      #F0EEE3;
+  --white:      #FFFFFF;
+  --tan:        #C59C72;
+  --tan-deep:   #A97F55;
+  --sage:       #C2CCC4;
+  --sage-deep:  #96A398;
+  --ink:        #000000;
+  --brown:      #3A2A1C;   /* donkerbruine tekstkleur */
+  --brown-soft: #6B5542;
+
+  --display: 'Libre Caslon Condensed', Georgia, serif;
+  --body: 'Newsreader', Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  color: var(--brown);
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+p { margin: 0 0 1em 0; }
+
+a { color: var(--tan-deep); }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 72px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__castle {
+  width: 100%;
+  max-width: 560px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.hero__eyebrow {
+  font-family: var(--body);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--brown-soft);
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.08;
+  max-width: 680px;
+}
+
+.hero__sub {
+  font-size: 20px;
+  color: var(--brown-soft);
+  max-width: 540px;
+  margin-top: 20px;
+}
+
+/* ---------- Section rhythm ---------- */
+section {
+  padding: 64px 0;
+}
+
+section.alt {
+  background: var(--white);
+}
+
+.section-label {
+  font-family: var(--body);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--tan-deep);
+  margin-bottom: 8px;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 28px;
+}
+
+/* ---------- Intro ---------- */
+.intro p {
+  font-size: 20px;
+  max-width: 640px;
+}
+
+/* ---------- Geschiedenis ---------- */
+.history-grid {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.history-grid > div { flex: 1 1 300px; }
+
+.pull {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  color: var(--tan-deep);
+  border-left: 3px solid var(--tan);
+  padding-left: 22px;
+  margin: 28px 0;
+  line-height: 1.35;
+}
+
+/* ---------- Attracties ---------- */
+.group-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--brown);
+  margin: 44px 0 4px;
+}
+.group-title:first-of-type { margin-top: 0; }
+
+.group-note {
+  font-style: italic;
+  color: var(--brown-soft);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.spot {
+  border-left: 3px solid var(--sage-deep);
+  padding: 4px 0 4px 22px;
+  margin-bottom: 30px;
+}
+
+.spot--tan { border-left-color: var(--tan); }
+
+.spot h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.spot p { margin-bottom: 8px; font-size: 17px; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  font-size: 15px;
+  color: var(--brown-soft);
+  font-style: italic;
+}
+
+.meta span strong {
+  font-style: normal;
+  color: var(--brown);
+  font-weight: 600;
+}
+
+.notice {
+  background: var(--sage);
+  color: var(--brown);
+  padding: 14px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-style: italic;
+  margin: 28px 0 10px;
+}
+
+/* ---------- Waarom bezoeken ---------- */
+.why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 40px;
+  margin-top: 32px;
+}
+
+.why-item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--tan-deep);
+}
+
+.why-item p { font-size: 16px; margin-bottom: 0; }
+
+@media (max-width: 620px) {
+  .why-list { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 40px; }
+  section h2 { font-size: 30px; }
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--brown);
+  color: var(--cream);
+  padding: 48px 0 40px;
+}
+
+footer h2 {
+  color: var(--cream);
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+footer p, footer a {
+  color: var(--sage);
+  font-size: 16px;
+}
+
